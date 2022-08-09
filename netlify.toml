@@ -3,3 +3,7 @@ command = 'npm run build'
 functions = 'functions'
 publish = 'build'
 targetPort = "3000"
+[[redirects]]
+  from = "/user/*"
+  to = "/index.html"
+  status = 200
