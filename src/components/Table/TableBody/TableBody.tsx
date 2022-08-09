@@ -24,7 +24,7 @@ export const PlayerTableBody = ({users}: Props) => {
       {users.map(({ id, avatar, first_name, last_name, email }) => (
         <tr key={id}>
           <td>{id}</td>
-          <td><img src={avatar ? avatar : "https://robohash.org/temporibusvelquo.png?size=100x100&set=set1"} width="50px" height="50px" /></td>
+          <td><img src={avatar ? avatar : "https://robohash.org/temporibusvelquo.png?size=100x100&set=set1"} width="50px" height="50px" alt={first_name}/></td>
           <td>{first_name}</td>
           <td>{last_name}</td>
           <td>{email}</td>

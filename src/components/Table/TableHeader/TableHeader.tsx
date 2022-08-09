@@ -1,6 +1,3 @@
-import cn from 'classnames';
-import styles from './TableHeader.module.scss';
-
 export default function PlayerTableHeader() {
   return (
     <thead>
