@@ -1,0 +1,46 @@
+@use '../variables';
+
+$header-height: 2.5rem;
+
+.cell {
+  border-bottom: 1px solid wheat;
+  font-size: 1rem;
+  font-weight: 600;
+  height: $header-height;
+  letter-spacing: 0.00937em;
+  line-height: 1.75rem;
+  position: sticky;
+  text-align: left;
+  top: 3.5rem;
+  vertical-align: middle;
+  will-change: tranform;
+  z-index: 1;
+  cursor: pointer;
+
+  &::after {
+    border: inherit;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.fname {
+  width: 100%;
+}
+
+.lname {
+  padding-right: 1rem;
+  text-align: right;
+  width: 100%;
+}
+
+.email {
+  padding-right: 1.5rem;
+  text-align: right;
+  width: 8rem;
+}

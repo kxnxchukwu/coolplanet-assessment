@@ -1,0 +1,42 @@
+@use '../variables';
+
+.tbody {
+  background-color: white;
+}
+
+.row {
+  background-color: white;
+  transition: background-color 0.15s;
+
+  &:hover {
+    background-color: whitesmoke;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid blueviolet;
+  }
+}
+
+.avatar {
+  text-align: center;
+}
+
+.winnings {
+  padding-right: 1.5rem;
+  text-align: right;
+}
+
+.country {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.countryAvatar {
+  margin-right: 0.5rem;
+}
+
+.buttonsBarContainer {
+  display: flex;
+  justify-content: space-between;
+}

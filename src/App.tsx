@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes as Switch, Route, Navigate} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header/Header';
+import PlayerTable from './components/Table';
+import UserProfile from "./components/User/user";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+    <Header/>
+    <Switch>   
+    <Route path="/users" element={<PlayerTable />} />
+    <Route path="/user/:id" element={<UserProfile />} />  
+    <Route
+    path="*"
+    element={<Navigate to="/users" replace />}
+    />
+    </Switch>
+    </BrowserRouter>
+    </>
   );
 }
 

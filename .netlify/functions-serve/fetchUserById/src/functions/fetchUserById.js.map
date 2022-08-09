@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../../Downloads/coolplanet-assessment/functions/fetchUserById.ts"],
+  "sourceRoot": "C:/Users/kenec/AppData/Local/Temp/tmp-16328-03Ym3bnhGfHb",
+  "sourcesContent": ["import { Handler } from \"@netlify/functions\";\r\nimport initialData from \"../src/static/user.json\"\r\n\r\nconst handler: Handler = async function (event, context) {\r\n  // Do stuff and return a response...\r\n  const { queryStringParameters } = event;\r\n  const userQuery = parseInt(queryStringParameters.user)\r\n  const filteredUser = initialData.filter(user => {\r\n    return user.id === userQuery\r\n    });\r\n\r\n  return {\r\n    statusCode: 200,\r\n    body: JSON.stringify(filteredUser)\r\n  }\r\n};\r\n\r\nexport { handler };"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAGA,IAAM,UAAmB,eAAgB,OAAO,SAAS;AAEvD,QAAM,EAAE,0BAA0B;AAClC,QAAM,YAAY,SAAS,sBAAsB,IAAI;AACrD,QAAM,eAAe,aAAY,OAAO,UAAQ;AAC9C,WAAO,KAAK,OAAO;AAAA,EACnB,CAAC;AAEH,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,MAAM,KAAK,UAAU,YAAY;AAAA,EACnC;AACF;",
+  "names": []
+}
