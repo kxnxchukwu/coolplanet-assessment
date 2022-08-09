@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
 import Badge from "react-bootstrap/Badge";
 import Form from "react-bootstrap/Form";
 import NotFound from "../NotFound/notfound";
+import BreadCrumb from "../Breadcrumb/breadcrumb";
 
 const UserProfile = () => {
   let { id: userId } = useParams();
@@ -41,12 +42,17 @@ const UserProfile = () => {
 
   const userDetails = user?.first_name ? (
     <Container className="m-4 mx-auto">
+      <BreadCrumb />
       <h1 className="h1 text-center text-success"> User Details </h1>
       <Row>
         <Col sm={5}>
           <img
             className="rounded mx-auto d-block"
-            src={user?.avatar ? user?.avatar : "https://robohash.org/temporibusvelquo.png?size=100x100&set=set1"}
+            src={
+              user?.avatar
+                ? user?.avatar
+                : "https://robohash.org/temporibusvelquo.png?size=100x100&set=set1"
+            }
             width="500px"
             height="400px"
             alt={user?.first_name}
