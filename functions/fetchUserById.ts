@@ -5,6 +5,14 @@ const handler: Handler = async function (event, context) {
   // Do stuff and return a response...
   const { queryStringParameters } = event;
   const userQuery = parseInt(queryStringParameters.user)
+
+  if (isNaN(userQuery)) {
+    return {
+        statusCode: 200,
+        body: JSON.stringify([])
+      }
+  }
+
   const filteredUser = initialData.filter(user => {
     return user.id === userQuery
     });
@@ -13,6 +21,7 @@ const handler: Handler = async function (event, context) {
     statusCode: 200,
     body: JSON.stringify(filteredUser)
   }
+  
 };
 
 export { handler };

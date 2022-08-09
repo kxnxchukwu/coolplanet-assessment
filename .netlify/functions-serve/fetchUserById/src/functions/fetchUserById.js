@@ -85,6 +85,12 @@ var user_default = [
 var handler = async function(event, context) {
   const { queryStringParameters } = event;
   const userQuery = parseInt(queryStringParameters.user);
+  if (isNaN(userQuery)) {
+    return {
+      statusCode: 200,
+      body: JSON.stringify([])
+    };
+  }
   const filteredUser = user_default.filter((user) => {
     return user.id === userQuery;
   });
