@@ -29,7 +29,7 @@ export const PlayerTableBody = ({users}: Props) => {
           <td>{last_name}</td>
           <td>{email}</td>
           <td className={styles.buttonsBarContainer}>
-            <button onClick={(event) => handleClick(event, id)}> <img src="https://res.cloudinary.com/kxnxchukwu/image/upload/v1659983870/open_grsbws.svg" width="45px" height="45px" /> </button>
+            <button onClick={(event) => handleClick(event, id)}> <img src="https://res.cloudinary.com/kxnxchukwu/image/upload/v1659983870/open_grsbws.svg" width="45px" height="45px" alt="Open in a new tab icon" /> </button>
           </td>
         </tr>
       ))}

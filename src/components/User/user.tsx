@@ -37,7 +37,7 @@ const UserProfile = () => {
     }
 
     getUserById();
-  }, []);
+  }, [userId]);
 
   const userDetails = user?.first_name ? (
     <Container className="m-4 mx-auto">
